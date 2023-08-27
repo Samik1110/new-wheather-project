@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="main2">
+   <h2 style="text-align: center; font-size: 40px; "><b> Enter City Name</b></h2>
+
+  <div class="main123" style="font-size: 40px; color: rgb(7, 7, 59);"> <input type="email" class="form-control"  placeholder="Enter city name" [(ngModel)]="city_Name"><br><br> </div>
+  <button type="button" [disabled]="!city_Name" class="btn btn-light" (click)="weatherData()">Show Weather Details</button><br>
+  </div><br><br>
+
+
+  <div *ngIf="weatherDetails" class="weatherData">
+      <h2 style="color: blue;margin-left: 113px">Weather Details</h2>
+      <div class="data">City Name :&nbsp;&nbsp;{{cityName}}</div><br>
+      <div class="data">Country Name :&nbsp;&nbsp;{{CountryName}}</div><br>
+      <div class="data">Tempreture :&nbsp;&nbsp;{{Temp}}&deg;C</div><br>
+      <div class="data">Temp_MIN :&nbsp;&nbsp;{{TempMin}}&deg;C</div><br>
+      <div class="data">Temp_MAX :&nbsp;&nbsp;{{TempMax}}&deg;C</div><br>
+      <div class="data">Pressure :&nbsp;&nbsp;{{Pressure}}pa</div><br>
+      <div class="data">Humidity :&nbsp;&nbsp;{{humidity}}%</div><br>
+      <div class="data">Speed :&nbsp;&nbsp;{{speed}}m/s</div><br>
+      </div>
+
+  </div>
+
